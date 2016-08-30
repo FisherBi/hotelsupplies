@@ -15,7 +15,6 @@ import java.util.List;
  * Created by piqiu on 2/23/16.
  */
 @Service
-@Transactional(propagation = Propagation.REQUIRED)
 public class UserService {
 
     @Autowired
@@ -71,9 +70,5 @@ public class UserService {
             checkResult.setPassCheck(true);
         }
         return checkResult;
-    }
-
-    public void setUserDao(UserDao userDao) {
-        this.userDao = userDao;
     }
 }
